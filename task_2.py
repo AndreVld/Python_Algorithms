@@ -13,15 +13,13 @@ def sum_hex(first, second):
     second = deque(second)
 
     list_of_numbers = [str(i) for i in range(10)] + ['A', 'B', 'C', 'D', 'E', 'F']
-    len_first = len(first)
-    len_second = len(second)
 
-    # if len_first > len_second:
-    #     first, second = second, first
+    if len(first) > len(second):
+        first, second = second, first
 
     _sum = deque()
     k = 0
-    for i in range(len_second):
+    for i in range(len(second)):
         one = list_of_numbers.index(second.pop())
 
         if len(first):
@@ -41,6 +39,7 @@ def sum_hex(first, second):
 
 
 # print(sum_hex('A2', 'C4F'))
+
 
 
 def multi_hex(first, second):
